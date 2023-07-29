@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // styles
 import './styles/index.scss'
+import BeerCard from './pages/BeerCard';
 
 const queryClient = new QueryClient()
 
@@ -18,6 +19,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path= '/beer/:name' element={<BeerCard />}/> 
       </Routes>
     </Router>
     </QueryClientProvider>

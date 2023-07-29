@@ -1,21 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
+import "../styles/home.scss";
+import Beer from "../components/Beer";
+import { fetchData } from "../helpers/fetchData";
 
-const Home = () => {
 
-const getData = async () => {
-    const res = await fetch('https://api.punkapi.com/v2/beers?page=1&per_page=80')
-    const data = await res.json()
+const Home = () => { 
 
-    return data
-}   
-
-const query = useQuery({
+const {isLoading, error, data} = useQuery({
     queryKey: ['allBeers'],
-    queryFn: getData,
+    queryFn: () => fetchData(),
 })
 
     return ( <section className="home-container">
-        {query.data && query.data.map(beer => <div>{beer.name}</div>)}
+
+        {data && data.map((beer) => (
+        <Beer beer={beer} key={beer.name}/>
+        ))}
+
     </section> );
 }
  
