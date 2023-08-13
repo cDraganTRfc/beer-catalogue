@@ -14,8 +14,6 @@ const Beer = ({beer}) => {
         ) : (
           <img src={noImageIcon} alt="No Image" />
         )}
-
-            
         </div>
         </Link>
      );

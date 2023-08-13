@@ -7,14 +7,14 @@ import { useState } from "react";
 
 const Home = () => { 
 
-    const [allBeers, setAllBeers] = useState([]); // Svi podaci piva
-    const [currentPage, setCurrentPage] = useState(1); // Trenutna stranica
-    const pageSize = 80; // Broj stavki po stranici
+    const [allBeers, setAllBeers] = useState([]); 
+    const [currentPage, setCurrentPage] = useState(1); 
+    const pageSize = 80; 
 
     
 
 const {isLoading, error, data} = useQuery({
-    queryKey: [`allBeers-${currentPage}`], // Koristi currentPage kao deo ključa
+    queryKey: [`allBeers-${currentPage}`], 
     queryFn: () => fetchData(currentPage, pageSize),
 })
 
@@ -36,20 +36,15 @@ const loadMore = () => {
         data.map((beer) => (
         <Beer beer={beer} key={beer.name}/>
         ))}
-
-        
 </div>
 
 <div className="button-container">
-          
           <button className="load-more-button" onClick={loadLess}>
             Load less
           </button>
-
           <button className="load-more-button" onClick={loadMore}>
             Load more
           </button>
-
         </div>
     </section> );
 }
