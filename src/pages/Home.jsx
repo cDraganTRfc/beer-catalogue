@@ -20,6 +20,8 @@ const {isLoading, error, data} = useQuery({
     queryFn: () => fetchData(currentPage, pageSize),
 })
 
+const [searchWord, setSearchWord] = useState("")
+
 
 const loadMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);
@@ -34,12 +36,20 @@ const loadLess = () => {
 
     return ( <section className="home-container">
         <div className="filter-container">
-        <SearchFilter />
+        <SearchFilter setSearchWord={setSearchWord}/>
         <SortFilter />
         </div>
         <div className="wrapper">
         {data && 
-        data.map((beer) => (
+        data.filter(beer => {
+            if (searchWord === "") {
+                return beer;
+            } else if (beer.name.toLowerCase()
+            .includes(searchWord.toLowerCase())) {
+                return beer;
+            }
+        })
+        .map((beer) => (
         <Beer beer={beer} key={beer.name}/>
         ))}
 </div>
@@ -47,11 +57,11 @@ const loadLess = () => {
 <div className="button-container">
     
           <button className="load-more-button" onClick={loadLess}>
-            Load less
+            Show less
           </button>
 
           <button className="load-more-button" onClick={loadMore}>
-            Load more
+            Show more
           </button>
         </div>
     </section> );
