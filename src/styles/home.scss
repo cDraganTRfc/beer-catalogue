@@ -1,6 +1,39 @@
 @import "../styles/index.scss";
 
 .home-container {
-    margin-top: 250px;
+    margin-top: 240px;
+    background-size: contain;
+    max-width: 1440px;
+    background-color: white;
     
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 70px;
+    padding: 10px;
+
+    button {
+        all: unset;
+        cursor: pointer;
+        background-color: $Blue;
+        height: 30px;
+        width: 100px;
+        padding: 10px;
+        border-radius: 50px;
+        text-align: center;
+    }
 }
