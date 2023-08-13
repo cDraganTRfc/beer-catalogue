@@ -1,0 +1,46 @@
+@import "./index.scss";
+
+
+.search-filter {
+    background-color: $Gray;
+    display: flex;
+    padding: 0.75rem;
+    border-radius: 5px;
+    width: 35%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    input {
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 5px;
+        font-family: 'Special Elite', cursive;
+        font-size: 1.05rem;
+        border-radius: inherit;
+
+        &::placeholder {
+            font-size: 0.9rem;
+            color: $Gray;
+        }
+
+    }
+    button {
+        all: unset;
+        width: 40px;
+        border-radius: inherit;
+        border: 1px solid transparent;
+        background: url("https://www.iconbolt.com/iconsets/pixelicons-line/beer.svg")
+        no-repeat center;
+        opacity: 0.7;
+        text-indent: -999%;
+        
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        input:focus {
+            outline: inset 1px black;
+        }
+    }
+}

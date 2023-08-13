@@ -8,22 +8,26 @@
 }
 
 .wrapper {
-    width: 100%;
+    width: 1440px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    margin-left: 20px;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .button-container {
     
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 60px;
     height: 70px;
+    width: 1440px;
     padding: 10px;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     button {
         all: unset;
@@ -35,4 +39,12 @@
         border-radius: 50px;
         text-align: center;
     }
+}
+
+.filter-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
 }
