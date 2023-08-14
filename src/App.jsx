@@ -1,6 +1,7 @@
 //components
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
+import NotFound from './pages/NotFound';
 
 // other
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path= '/beer/:name' element={<BeerCard />}/> 
+        <Route path= "*" element={<NotFound />} />
       </Routes>
     </Router>
     </QueryClientProvider>

@@ -1,0 +1,31 @@
+@import "../styles/index.scss";
+
+.not-found-container {
+    margin-top: 240px;
+    max-width: 1440px;
+    background-image: url('../images/404.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    
+    h1 {
+        font-size: 7rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .bottom {
+        margin-top: 500px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+}
