@@ -14,6 +14,7 @@ const Beer = ({beer}) => {
         ) : (
           <img src={noImageIcon} alt="No Image" />
         )}
+        <p className="procentage">{beer.abv}% Alc.</p>
         </div>
         </Link>
      );

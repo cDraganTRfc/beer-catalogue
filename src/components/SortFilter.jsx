@@ -1,5 +1,5 @@
 const SortFilter = () => {
-    return ( <div>sort Filter</div> );
+    return ( <div>sort filter</div> );
 }
  
 export default SortFilter;

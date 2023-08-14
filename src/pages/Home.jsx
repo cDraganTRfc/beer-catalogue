@@ -5,6 +5,7 @@ import { fetchData } from "../helpers/fetchData";
 import { useState } from "react";
 import SearchFilter from "../components/SearchFilter";
 import SortFilter from "../components/SortFilter";
+import Loader from "../components/Loader";
 
 
 const Home = () => { 
@@ -23,11 +24,11 @@ const {isLoading, error, data} = useQuery({
 const [searchWord, setSearchWord] = useState("")
 
 
-const loadMore = () => {
+const handleLoadMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
 
-const loadLess = () => {
+const handleLoadLess = () => {
     if (currentPage > 1) {
       setCurrentPage((prevPage) => prevPage - 1);
       setAllBeers((prevData) => prevData.slice(0, -pageSize));
@@ -37,6 +38,7 @@ const loadLess = () => {
     return ( <section className="home-container">
         <div className="filter-container">
         <SearchFilter setSearchWord={setSearchWord}/>
+        {isLoading && <Loader />}
         <SortFilter />
         </div>
         <div className="wrapper">
@@ -56,11 +58,11 @@ const loadLess = () => {
 
 <div className="button-container">
     
-          <button className="load-more-button" onClick={loadLess}>
+          <button className="load-less-button" onClick={handleLoadLess}>
             Show less
           </button>
 
-          <button className="load-more-button" onClick={loadMore}>
+          <button className="load-more-button" onClick={handleLoadMore}>
             Show more
           </button>
         </div>
