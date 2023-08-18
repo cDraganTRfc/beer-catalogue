@@ -1,0 +1,66 @@
+@import './index.scss';
+
+.dropbtn {
+    width: 170px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $Gray;
+    color: white;
+    padding: 0.75rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: 'Special Elite', cursive;
+
+    img {
+        width: 15%;
+    }
+
+    &:hover, &:focus {
+        background-color: gray;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    width: 170px;
+    text-align: left;
+    background-color: $Gray;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 0.5rem;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+    
+
+    button {
+        all: unset;
+        width: 86%;
+        display: block;
+        padding: 0.75rem;
+        color: white;
+        font-size: 0.8rem;
+
+        &:hover {
+            background-color: gray;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}

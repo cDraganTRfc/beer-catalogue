@@ -1,0 +1,180 @@
+@import "index.scss";
+
+.beer-page {
+    margin-top: 220px;
+    padding: 20px;
+}
+
+.nav-info {
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.right {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: $Gray;
+}
+
+.name {
+    margin-top: 10px;
+}
+
+.tagline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid black;
+
+    p {
+        font-size: 2rem;
+    }
+    
+}
+
+.tagline-right {
+    display: flex;
+    gap: 20px;
+    color: $Gray;
+
+    p{
+        font-size: 2rem;
+        border-left: 3px solid black;
+        text-align: center;
+        margin-left: 5px;
+    }
+}
+
+.image-container {
+    
+    margin-top: 20px;
+    padding: 10px;
+    
+
+    img {
+        height: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.description {
+    height: 100%;
+    padding: 10px;
+    background-color: $Gray;
+    margin-top: 20px;
+}
+
+.title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 5px solid white;
+}
+
+.middle-wrapper {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.hops-values {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 300px;
+    
+}
+
+.ingredients {
+    margin-top: 20px;
+    background-color: $Gray;
+    padding: 10px;
+}
+
+.two {
+    color: white;
+}
+
+.basics {
+    margin-top: 20px;
+    background-color: $Gray;
+    padding: 10px;
+    
+}
+
+.brew {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        color: white;
+        margin-left: 50px;
+    }
+}
+
+.target {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    span {
+        color: white;
+        margin-left: 50px;
+    }
+}
+
+.food-pairiting {
+    background-image: url("../images/food.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10px;
+    background-color: $Gray;
+    margin-top: 20px;
+
+    p {
+        margin-top: 20px;
+    }
+}
+
+.brewer-tips {
+    margin-top: 20px;
+    background-color: $Gray;
+    padding: 10px;
+    background-image: url("../images/tip.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 225px 225px;
+}
+
+button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    img {
+        margin-top: -4px;
+    }
+}

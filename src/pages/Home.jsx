@@ -21,7 +21,8 @@ const {isLoading, error, data} = useQuery({
     queryFn: () => fetchData(currentPage, pageSize),
 })
 
-const [searchWord, setSearchWord] = useState("")
+const [searchWord, setSearchWord] = useState("");
+const [selectSort, setSelectSort] = useState("")
 
 
 const handleLoadMore = () => {
@@ -39,7 +40,7 @@ const handleLoadLess = () => {
         <div className="filter-container">
         <SearchFilter setSearchWord={setSearchWord}/>
         {isLoading && <Loader />}
-        <SortFilter />
+        <SortFilter setSelectSort={setSelectSort}/>
         </div>
         <div className="wrapper">
         {data && 
