@@ -32,15 +32,15 @@
 .dropdown-content {
     opacity: 0;
     visibility: hidden;
-    width: 170px;
+    width: 195px;
     text-align: left;
     background-color: $Gray;
     position: absolute;
     border-radius: 5px;
     z-index: 1;
-    margin-top: 0.5rem;
     transform: translateY(-10px);
     transition: all 0.25s ease;
+    margin-top: -10px;
     
 
     button {

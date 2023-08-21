@@ -42,9 +42,43 @@
 }
 
 .filter-container {
-    padding: 20px;
+    padding: 20px 0px 20px 20px;
     margin: 0 auto;
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 570px;
+        max-width: 340px;
+        margin-left: 120px;
+    }
+
+    .button-container {
+        width: 560px;
+        margin-left: 10px;
+        
+        button {
+            height: 15px;
+            width: 50px;
+            padding: 10px;
+            font-size: 0.6rem;
+        }
+    }
+
+    .filter-container {
+        width: 570px;
+        margin: -130px 0px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropdown {
+        margin-left: 180px;
+    }
 }

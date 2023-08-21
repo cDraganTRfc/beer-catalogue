@@ -1,9 +1,9 @@
 @import "./index.scss";
 
 .navbar {
-    max-width: 1440px;
+    width: 1440px;
     position: fixed;
-    width: 100%;
+    // width: 100%;
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.200) 0px 3px 5px -1px;
     font-size: 1.5rem;

@@ -4,6 +4,8 @@ import { api } from "../helpers/api";
 import "../styles/beercard.scss";
 import logo from "../images/diy-dog-beer-logo.png";
 import noImageIcon from "../images/alt-image.png";
+import foodImg from "../images/food.png"
+import tip from "../images/tip.png"
 
 
 const BeerCard = () => {
@@ -99,16 +101,20 @@ const BeerCard = () => {
                 </div>
                 <div className="food-pairiting">
                     <span className="title">Food pairing:</span>
-                    <p>{data[0].food_pairing[0]},</p>
-                    <p>{data[0].food_pairing[1]},</p>
-                    <p>{data[0].food_pairing[2]},</p>
+                    <p>{data[0].food_pairing[0]};</p>
+                    <p>{data[0].food_pairing[1]};</p>
+                    <p>{data[0].food_pairing[2]};</p>
+                    <div><img src={foodImg} alt="foodImg" /></div>
                 </div>
                 <div className="brewer-tips">
                     <p className="title">Brewer tips: </p>
                     <p>{data[0].brewers_tips}</p>
+                    <div><img src={tip} alt="tipImg" /></div>
                 </div>
                 </div>
-                
+                <footer className="footer">
+                   <p> If you think you can win me over with craft beer and nachos, you’re right!</p>
+                    </footer>
                 </div>}
             </div>
         </div>

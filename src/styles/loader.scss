@@ -1,7 +1,7 @@
 @import "./index.scss";
 
 .lds-roller {
-    margin: 0 auto;
+    margin: -10px 0 10px;
     display: inline-block;
     position: relative;
     width: 40px;
@@ -86,4 +86,11 @@
       transform: rotate(360deg);
     }
   }
+
+  @media only screen and (max-width: 600px) {
+
+  .lds-roller {
+    margin: -10px 150px 10px 240px;
+  }
+}
   

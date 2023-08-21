@@ -101,7 +101,6 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
-    width: 300px;
     
 }
 
@@ -145,9 +144,6 @@
 }
 
 .food-pairiting {
-    background-image: url("../images/food.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
     padding: 10px;
     background-color: $Gray;
     margin-top: 20px;
@@ -155,16 +151,29 @@
     p {
         margin-top: 20px;
     }
+
+    img {
+        border-radius: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px;
+    }
 }
 
 .brewer-tips {
     margin-top: 20px;
     background-color: $Gray;
     padding: 10px;
-    background-image: url("../images/tip.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 225px 225px;
+    
+    img {
+        width: 225px;
+        height: 225px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+    }
 }
 
 button {
@@ -176,5 +185,74 @@ button {
 
     img {
         margin-top: -4px;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+    border-top: 5px solid black;
+    text-align: end;
+
+    p {
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .middle-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin-left: 120px;
+    }
+
+    .footer {
+        max-width: 300px;
+        text-align: center;
+        margin-left: 120px;
+    }
+
+    .tagline {
+        max-width: 550px;
+        
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .nav-info {
+        max-width: 550px;
+
+        p {
+            font-size: 0.8rem;
+        }
+        h2 {
+            font-size: 0.8rem;
+        }
+        h1 {
+            font-size: 0.8rem;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .navbar {
+        width: 560px;
+        margin-left: 10px;
+
+        img {
+            width: 90px;
+            height: 90px;
+        }
+        li {
+            font-size: 1rem;
+        }
+    }
+
+    .beer-page {
+        margin-top: 100px;
     }
 }
