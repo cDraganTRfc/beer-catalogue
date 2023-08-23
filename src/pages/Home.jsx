@@ -52,6 +52,15 @@ const handleLoadLess = () => {
                 return beer;
             }
         })
+        .sort((a, b) => {
+          if (selectSort === "Name") {
+            return a.name.localeCompare(b.name);
+          } else if (selectSort === "abv") {
+            return a.abv - b.abv;
+          } else if (selectSort === "id") {
+            return a.id - b.id;
+          }
+        })
         .map((beer) => (
         <Beer beer={beer} key={beer.name}/>
         ))}
