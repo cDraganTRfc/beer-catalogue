@@ -88,6 +88,9 @@ const BeerCard = () => {
                         </div>
                         <p>Contributed by: {data[0].contributed_by}</p>
                         <div className="target">
+                        <p>EBC: <span className="ebc">{data[0].ebc}</span></p>
+                        <p>SRM: <span className="ebc">{data[0].srm}</span></p>
+                        <p>PH .: <span className="ebc">{data[0].ph}</span></p>
                         <p>Target OG: <span>{data[0].target_og}</span> </p>
                         <p>Target FG: <span>{data[0].target_fg}</span></p>
                         </div>
