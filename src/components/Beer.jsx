@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import "../styles/beer.scss";
 import noImageIcon from "../images/alt-image.png"
 
+const cleanName = (name) => {
+  return name.replace(/[^\w\s]/gi, "");
+};
+const Beer = ({ beer }) => {
+  const cleanedName = cleanName(beer.name);
 
-const Beer = ({beer}) => {
-    return ( 
-        <Link to={`/beer/${beer.name}`} className="card-container">
+  return (
+      <Link to={`/beer/${cleanedName}`} className="card-container">
         <div className="beer-container">
             <p className="name">{beer.name}</p>
             <p className="id">#{beer.id}</p>

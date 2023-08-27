@@ -11,11 +11,13 @@ import tip from "../images/tip.png"
 const BeerCard = () => {
 
     const {name} = useParams();
+    const cleanedName = name.replace(/[^\w\s]/gi, "");
     const navigate = useNavigate();
 
     const {isLoading, error, data} = useQuery({
         queryKey: ["beer", name],
-        queryFn: () => api(name)
+        queryFn: () => api(cleanedName)
+        
     });
 
     if (!data || data.length === 0) {
